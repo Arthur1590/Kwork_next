@@ -111,12 +111,14 @@
 	--how-itemBg: #fffffff3;
 	--get-item-shadow: 4px 4px 20px 0 #b1b1b540;
 	--blue-theme: #205bc9;
-	--gray-light-eraText: #eeeeee;
-	--mobile-swiper-item: #b1b1b540;
+	--gray-light-eraText: #515151;
+	--mobile-swiper-item: #fff;
 	--bg-mobile: #fff;
+	--burger-span: #000000;
 }
 .dark-theme {
 	--gray-light-eraText: #eeeeee;
+	--burger-span: #fff;
 	--bg-mobile: #000;
 	--dark-gray: #efefef;
 	--gray-light: #d4d4d4;
@@ -372,29 +374,24 @@ header {
 	}
 
 	// ? mob V.
-	@media (max-width: 574px) {
-		.header__buttons-login,
-		.header__buttons-signup {
-			display: none;
-		}
-	}
+
 	.m_header {
 		display: none;
 	}
 	.menu {
-		z-index: 999;
-		pointer-events: fill;
 		display: none;
 		position: relative;
 		cursor: pointer;
 		width: 30px;
 		height: 20px;
 		z-index: 9999;
+
 		@media (max-width: 992px) {
 			display: block;
 		}
 
 		& span {
+			z-index: 9;
 			position: absolute;
 			left: 0;
 			height: 2px;
@@ -402,7 +399,7 @@ header {
 			top: 50%;
 			transform: translateY(-50%) scale(1);
 			display: block;
-			background: var(--text-color);
+			background: var(--burger-span);
 			transition: 0.3s;
 		}
 		&::before,
@@ -411,7 +408,7 @@ header {
 			position: absolute;
 			width: 100%;
 			height: 2px;
-			background: var(--text-color);
+			background: var(--burger-span);
 
 			left: 0;
 			display: block;
@@ -445,8 +442,7 @@ header {
 		top: 0;
 		right: 0;
 		bottom: 0;
-		width: 428px;
-		height: calc(100svh + 15px);
+		width: 320px;
 		overflow-y: auto;
 		background-color: var(--bg-mobile);
 		transform-origin: 0 0;
@@ -461,12 +457,12 @@ header {
 		span {
 			width: 100%;
 			height: 1px;
-			background-color: var(--gray-light);
+			background-color: var(--bg-mobile);
 			transition: 0.3s;
 		}
 
 		.img__wrapper {
-			padding: 1.2rem 1rem;
+			padding: 1.2rem 1.5rem;
 			width: 100%;
 			display: flex;
 			align-items: center;
@@ -503,7 +499,51 @@ header {
 				width: 100%;
 				display: flex;
 				align-items: center;
+				justify-content: space-between;
 				gap: 2rem;
+
+				&-login {
+					display: none;
+					padding: 12px;
+					width: 100%;
+					font-size: 20px;
+					line-height: 28px;
+					font-weight: 500;
+					text-align: center;
+					color: var(--text-color);
+					transition: 0.2s ease-in-out;
+					&:hover {
+						color: var(--blue-dark);
+					}
+					@media (max-width: 575px) {
+						font-size: 16px;
+						line-height: 24px;
+						width: 100%;
+						display: block;
+					}
+				}
+				&-signup {
+					display: none;
+					padding: 12px;
+					width: 100%;
+					font-size: 20px;
+					line-height: 28px;
+					font-weight: 500;
+					text-align: center;
+					border-radius: 50px;
+					background-color: var(--blue);
+					color: #fff;
+					transition: 0.2s ease-in-out;
+					&:hover {
+						background-color: var(--blue-light);
+					}
+					@media (max-width: 575px) {
+						font-size: 16px;
+						line-height: 24px;
+						width: 100%;
+						display: block;
+					}
+				}
 			}
 			.m__outline {
 				border: 1px solid var(--blue-light);
@@ -884,7 +924,7 @@ header {
 				font-size: 42px;
 				line-height: 52px;
 				font-weight: 700;
-				color: var(--text-gray);
+				color: var(--gray-light-eraText);
 				padding-right: 24px;
 				b {
 					color: var(--blue-light);
@@ -938,7 +978,6 @@ header {
 					display: flex;
 					flex-direction: column;
 					gap: 20px;
-					backdrop-filter: blur(5.5px);
 
 					@media (max-width: 1830px) {
 						width: 29vw;
@@ -964,7 +1003,7 @@ header {
 							font-size: 24px;
 							line-height: 32px;
 							font-weight: 500;
-							color: var(--blue-light);
+							color: var(--blue-dark);
 							@media (max-width: 1830px) {
 								font-size: 1.25vw;
 								line-height: 1.67vw;
@@ -979,7 +1018,7 @@ header {
 							font-size: 20px;
 							line-height: 28px;
 							font-weight: 400;
-							color: var(--gray-light-eraText);
+							color: var(--dark-gray);
 							@media (max-width: 1830px) {
 								font-size: 1.105vw;
 								line-height: 1.538vw;
@@ -1004,7 +1043,6 @@ header {
 			gap: 40px;
 			max-width: 620px;
 			width: 100%;
-			backdrop-filter: blur(5.5px);
 
 			@media (max-width: 1830px) {
 				width: 32.29vw;
@@ -1423,6 +1461,7 @@ header {
 					.mobile__swiper-content {
 						height: 384px;
 						padding: 136px 24px 24px;
+
 						@media (max-width: 1280px) {
 							height: 340px;
 						}
@@ -1488,7 +1527,7 @@ header {
 						font-size: 16px;
 						line-height: 32px;
 						font-weight: 400;
-						color: var(--white-light);
+						color: var(--gray-light-eraText);
 						@media (max-width: 1440px) {
 							font-size: 20px;
 							line-height: 28px;
@@ -1509,7 +1548,7 @@ header {
 				width: 16px;
 				height: 16px;
 				border-radius: 50%;
-				background-color: var(--white-light);
+				background-color: var(--gray-light-eraText);
 			}
 			.swiper-pagination-bullet-active {
 				width: 20px;

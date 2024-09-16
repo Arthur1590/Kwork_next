@@ -27,10 +27,10 @@ export const Burger = () => {
 						<span></span>
 						<div className='m__nav'>
 							<div className='m__buttons'>
-								<a href='' className='header__buttons-signup'>
+								<a href='' className='m__buttons-signup'>
 									Sign Up
 								</a>
-								<a href='' className='header__buttons-login m__outline'>
+								<a href='' className='m__buttons-login m__outline'>
 									Log In
 								</a>
 							</div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Mobile_swiper } from './Mobile_swiper'
 import Image from 'next/image'
 const mainHowRowData = [
 	{
@@ -29,8 +28,8 @@ const mainHowRowData = [
 				dataAosOnce: true,
 				image: {
 					src: '/main/stars_max.svg',
-					width: 200,
-					height: 200,
+					width: 164,
+					height: 164,
 					alt: 'Cube',
 				},
 				text: {
