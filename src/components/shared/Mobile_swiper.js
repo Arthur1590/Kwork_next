@@ -55,8 +55,8 @@ export const Mobile_swiper = () => {
 					<div className='mobile__swiper-item big-item'>
 						<Image src={slide.img} width={136} height={136} alt='Cube' />
 						<div className='mobile__swiper-item-content'>
-							<span className='mobile__swiper-title'>{slide.title}</span>
-							<span className='mobile__swiper-text'>{slide.description}</span>
+							<span className='mobile__swiper-item-content-title'>{slide.title}</span>
+							<span className='mobile__swiper-item-content-text'>{slide.description}</span>
 						</div>
 					</div>
 				</SwiperSlide>

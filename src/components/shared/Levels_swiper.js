@@ -76,25 +76,24 @@ export const Levels_swiper = () => {
 		<Swiper
 			modules={[Scrollbar]}
 			scrollbar={{ draggable: true, hide: false }}
-			spaceBetween={24}
 			slidesPerView={3}
+			spaceBetween={24}
 			className='swiper swiper-levels'
+			observer={true}
+			observeParents={true}
 			breakpoints={{
-				// Когда экран меньше 640px
-				768: {
-					slidesPerView: 1, // Показывать 1 слайд
-					spaceBetween: 10, // Расстояние между слайдами
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20
 				},
-				// Когда экран от 640px до 768px
-				992: {
-					slidesPerView: 1, // Показывать 2 слайда
-					spaceBetween: 20, // Расстояние между слайдами
+				993: {
+					slidesPerView: 2,
+					spaceBetween: 20
 				},
-				// Когда экран больше 768px
-				1024: {
-					slidesPerView: 3, // Показывать 3 слайда
-					spaceBetween: 24, // Расстояние между слайдами
-				},
+				1238: {
+					slidesPerView: 3,
+					spaceBetween: 24,
+				}
 			}}
 		>
 			{sliderData.map(slide => (

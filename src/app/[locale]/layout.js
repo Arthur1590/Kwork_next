@@ -18,8 +18,8 @@ export default function RootLayout({ children, params: { locale } }) {
 	return (
 		<html lang={locale}>
 			<body className={onest.className}>
-					<Header />
-					<main className='main'>{children}</main>
+				<Header />
+				<main className='main'>{children}</main>
 			</body>
 		</html>
 	)

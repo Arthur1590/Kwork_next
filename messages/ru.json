@@ -1,14 +1,11 @@
 {
-	"Navigation": {
-		"Home": "Главная",
-		"Token": "Токен",
-		"Activity": "Активность",
+	"nav": {
+		"home": "Главная",
+		"token": "Токен",
+		"activity": "Активность",
 		"how": "Как начать",
-		"Listing": "Слушание",
-		"App": "Приложение",
-		"Faq": "ФАК"
-	},
-	"IndexPage": {
-		"description": "Welcome to the Next.js Internationalization (i18n) example! This demo showcases the power of the App Router and how to manage multilingual content seamlessly using next-intl."
+		"listing": "Слушание",
+		"app": "Приложение",
+		"faq": "ФАК"
 	}
 }

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Era_phone } from '../ui/Era_phone'
 
 export const Era = () => {
 	return (
@@ -15,16 +16,7 @@ export const Era = () => {
 				data-aos-duration='1200'
 				data-aos-once='true'
 			/>
-			<Image
-				width={367}
-				height={473}
-				src='/main/era-phone.png'
-				alt='phone'
-				className='main__era-phone'
-				data-aos='fade-up'
-				data-aos-duration='1200'
-				data-aos-once='true'
-			/>
+			<Era_phone />
 			<div className='site-holder'>
 				<div className='main__era-content'>
 					<div className='main__era-column'>

@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
+import { Download } from '../ui/Download'
+import {Phones_img} from '../ui/Phones_img'
 
 export const Invest = () => {
 	return (
@@ -25,24 +27,14 @@ export const Invest = () => {
 								Point your phone to download the App
 							</span>
 							<div className='mobile__qr-img'>
-								<Image
-									width={216}
-									height={216}
-									src='/main/mobile-qr.png'
-									alt='qr'
-								/>
+								<Image width={216} height={216} src='/main/qr.png' alt='qr' />
 							</div>
 						</div>
 						<div className='mobile__more'>
 							<div className='mobile__download'>
 								<span className='mobile__download-title'>
 									Download
-									<Image
-										src={'/main/Desktop_ Download.svg'}
-										width={20}
-										height={20}
-										alt={'downlaad'}
-									/>
+									<Download />
 								</span>
 								<div className='mobile__download-links'>
 									<a href='' className='mobile__download-link'>
@@ -77,12 +69,7 @@ export const Invest = () => {
 						data-aos-duration='1500'
 						data-aos-once='true'
 					>
-						<Image
-							width={556}
-							height={800}
-							src='/main/mobile-phones.png'
-							alt='phone'
-						/>
+						<Phones_img />
 					</div>
 				</div>
 			</div>

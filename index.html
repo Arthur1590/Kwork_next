@@ -1,0 +1,908 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NextFi</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header id="header">
+            <div class="header__content" data-aos="fade-down" data-aos-duration="1000">
+                <a href="" class="header__logo">
+                    <img src="logo.png" alt="NextFi Logo" class="logo">
+                </a>
+                <nav class="header__navigation">
+                    <a href="" class="header__navigation-item">Home</a>
+                    <a href="" class="header__navigation-item">Token</a>
+                    <a href="" class="header__navigation-item">Activity</a>
+                    <a href="" class="header__navigation-item">How to start</a>
+                    <a href="" class="header__navigation-item">Listing</a>
+                    <a href="" class="header__navigation-item">App</a>
+                    <a href="" class="header__navigation-item">FAQ</a>
+                </nav>
+                <div class="header__actions">
+                    <div class="header__buttons">
+                        <a href="" class="header__buttons-login">Log In</a>
+                        <a href="" class="header__buttons-signup">Sign Up</a>
+                        <nav role="navigation" class="m__header-nav__menu">
+                            <div id="menuToggle">
+                                <div class="mobile_burger">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 14L21.7276 14L35.4553 14" stroke="#3A3939" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M8 23L35.4553 23" stroke="#3A3939" stroke-width="3" stroke-linecap="round"/>
+                                        <line x1="23.2461" y1="31.5" x2="35.499" y2="31.5" stroke="#3A3939" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <ul id="menu">
+                                    <li class="menu__top-row">
+                                        <a href="" class="menu__action">
+                                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.9647 10.7314C18.5508 12.9232 18.2309 14.9465 18.3816 16.7962C18.5541 18.9132 19.3412 20.8046 21.2425 22.5015C23.1727 24.2244 25.8525 24.7377 28.265 24.8009C30.1745 24.851 31.9792 24.6195 33.2118 24.4377C33.1752 24.5318 33.1386 24.626 33.102 24.7205C32.2985 26.7928 31.4584 28.9594 28.8008 31.1594C27.2058 32.2023 25.7171 32.9219 24.1295 33.2667C22.5455 33.6108 20.8324 33.5885 18.7815 33.1041C13.4271 31.1434 9.07987 25.3263 10.938 18.5787C12.0524 15.6338 13.4684 13.8677 14.974 12.7135C16.2442 11.7397 17.6013 11.1824 18.9647 10.7314Z" stroke="black"/>
+                                            </svg>
+                                        </a>
+                                        <a href="" class="menu__action">
+                                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.4961 32.5C24.5661 32.5 22.9961 30.93 22.9961 29C22.9961 27.07 24.5661 25.5 26.4961 25.5H28.4961C28.7721 25.5 28.9961 25.724 28.9961 26C28.9961 26.276 28.7721 26.5 28.4961 26.5H26.4961C25.1171 26.5 23.9961 27.622 23.9961 29C23.9961 30.378 25.1171 31.5 26.4961 31.5C26.7721 31.5 26.9961 31.724 26.9961 32C26.9961 32.276 26.7721 32.5 26.4961 32.5Z" fill="black"/>
+                                                <path d="M30.4961 32.5H28.4961C28.2201 32.5 27.9961 32.276 27.9961 32C27.9961 31.724 28.2201 31.5 28.4961 31.5H30.4961C31.8751 31.5 32.9961 30.378 32.9961 29C32.9961 27.622 31.8751 26.5 30.4961 26.5C30.2201 26.5 29.9961 26.276 29.9961 26C29.9961 25.724 30.2201 25.5 30.4961 25.5C32.4261 25.5 33.9961 27.07 33.9961 29C33.9961 30.93 32.4261 32.5 30.4961 32.5Z" fill="black"/>
+                                                <path d="M26.9963 27.9992C26.8683 27.9992 26.7403 27.9502 26.6423 27.8532C26.4473 27.6582 26.4473 27.3412 26.6423 27.1462L27.7893 25.9992L26.6433 24.8532C26.4483 24.6582 26.4483 24.3413 26.6433 24.1462C26.8383 23.9513 27.1553 23.9513 27.3503 24.1462L28.8503 25.6463C29.0453 25.8412 29.0453 26.1582 28.8503 26.3532L27.3503 27.8532C27.2523 27.9502 27.1243 27.9992 26.9963 27.9992Z" fill="black"/>
+                                                <path d="M29.9963 33.9993C29.8683 33.9993 29.7403 33.9503 29.6423 33.8533L28.1423 32.3533C27.9473 32.1583 27.9473 31.8412 28.1423 31.6463L29.6423 30.1462C29.8373 29.9513 30.1543 29.9513 30.3493 30.1462C30.5443 30.3413 30.5443 30.6583 30.3493 30.8533L29.2033 31.9993L30.3493 33.1453C30.5443 33.3403 30.5443 33.6573 30.3493 33.8523C30.2523 33.9503 30.1243 33.9993 29.9963 33.9993Z" fill="black"/>
+                                                <path d="M21.5 33C15.159 33 10 27.841 10 21.5C10 15.159 15.159 10 21.5 10C27.841 10 33 15.159 33 21.5C33 21.574 32.994 23.324 32.466 24.681C32.365 24.938 32.075 25.066 31.819 24.966C31.562 24.866 31.434 24.576 31.535 24.319C31.902 23.371 32 22.061 32 21.5C32 15.71 27.29 11 21.5 11C15.71 11 11 15.71 11 21.5C11 27.29 15.71 32 21.5 32C21.89 32 22.274 31.975 22.653 31.934C22.923 31.904 23.174 32.101 23.205 32.377C23.235 32.651 23.037 32.898 22.763 32.928C22.317 32.977 21.904 33 21.5 33Z" fill="black"/>
+                                                <path d="M21.5 33C17.855 33 15 27.949 15 21.5C15 15.051 17.855 10 21.5 10C25.145 10 28 15.051 28 21.5C28 21.776 27.776 22 27.5 22C27.224 22 27 21.776 27 21.5C27 15.809 24.481 11 21.5 11C18.519 11 16 15.809 16 21.5C16 27.191 18.519 32 21.5 32C21.776 32 22 32.224 22 32.5C22 32.776 21.776 33 21.5 33Z" fill="black"/>
+                                                <path d="M21.5 33C21.224 33 21 32.776 21 32.5V10.5C21 10.224 21.224 10 21.5 10C21.776 10 22 10.224 22 10.5V32.5C22 32.776 21.776 33 21.5 33Z" fill="black"/>
+                                                <path d="M32.5 22H10.5C10.224 22 10 21.776 10 21.5C10 21.224 10.224 21 10.5 21H32.5C32.776 21 33 21.224 33 21.5C33 21.776 32.776 22 32.5 22Z" fill="black"/>
+                                                <path d="M30.5 16H12.5C12.224 16 12 15.776 12 15.5C12 15.224 12.224 15 12.5 15H30.5C30.776 15 31 15.224 31 15.5C31 15.776 30.776 16 30.5 16Z" fill="black"/>
+                                                <path d="M21.5 28H12.5C12.224 28 12 27.776 12 27.5C12 27.224 12.224 27 12.5 27H21.5C21.776 27 22 27.224 22 27.5C22 27.776 21.776 28 21.5 28Z" fill="black"/>
+                                                <path d="M27.5 23C27.224 23 27 22.776 27 22.5V21.5C27 21.224 27.224 21 27.5 21C27.776 21 28 21.224 28 21.5V22.5C28 22.776 27.776 23 27.5 23Z" fill="black"/>
+                                            </svg>
+                                        </a>
+                                        <span class="mobile_close_menu">
+                                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M30.0936 15.7193C30.5942 15.2187 30.5942 14.407 30.0936 13.9064C29.593 13.4058 28.7813 13.4058 28.2807 13.9064L22 20.1871L15.7193 13.9064C15.2187 13.4058 14.407 13.4058 13.9064 13.9064C13.4058 14.407 13.4058 15.2187 13.9064 15.7193L20.1871 22L13.9064 28.2807C13.4058 28.7813 13.4058 29.593 13.9064 30.0936C14.407 30.5942 15.2187 30.5942 15.7193 30.0936L22 23.8129L28.2807 30.0936C28.7813 30.5942 29.593 30.5942 30.0936 30.0936C30.5942 29.593 30.5942 28.7813 30.0936 28.2807L23.8129 22L30.0936 15.7193Z" fill="#3A3939"/>
+                                    </svg>
+                                </span>
+                                    </li>
+
+                                    <li class="menu-btns">
+                                        <a href="" class="btn btn-blue">Sign Up</a>
+                                        <a href="" class="btn btn-transparent">Log In</a>
+                                    </li>
+
+
+                                    <li><a href="" class="header-content__nav-link">Home</a></li>
+                                    <li><a href="" class="header-content__nav-link">Token</a></li>
+                                    <li><a href="" class="header-content__nav-link">Activity</a></li>
+                                    <li><a href="" class="header-content__nav-link">How to start</a></li>
+                                    <li><a href="" class="header-content__nav-link">Listing</a></li>
+                                    <li><a href="" class="header-content__nav-link">App</a></li>
+                                    <li><a href="" class="header-content__nav-link">FAQ</a></li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="header__icons">
+                        <a href="" class="header__icons-item">
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.9647 10.7314C18.5508 12.9232 18.2309 14.9465 18.3816 16.7962C18.5541 18.9132 19.3412 20.8046 21.2425 22.5015C23.1727 24.2244 25.8525 24.7377 28.265 24.8009C30.1745 24.851 31.9792 24.6195 33.2118 24.4377C33.1752 24.5318 33.1386 24.626 33.102 24.7205C32.2985 26.7928 31.4584 28.9594 28.8008 31.1594C27.2058 32.2023 25.7171 32.9219 24.1295 33.2667C22.5455 33.6108 20.8324 33.5885 18.7815 33.1041C13.4271 31.1434 9.07987 25.3263 10.938 18.5787C12.0524 15.6338 13.4684 13.8677 14.974 12.7135C16.2442 11.7397 17.6013 11.1824 18.9647 10.7314Z" stroke="black"/>
+                            </svg>
+                        </a>
+                        <a href="" class="header__icons-item">
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.4961 32.5C24.5661 32.5 22.9961 30.93 22.9961 29C22.9961 27.07 24.5661 25.5 26.4961 25.5H28.4961C28.7721 25.5 28.9961 25.724 28.9961 26C28.9961 26.276 28.7721 26.5 28.4961 26.5H26.4961C25.1171 26.5 23.9961 27.622 23.9961 29C23.9961 30.378 25.1171 31.5 26.4961 31.5C26.7721 31.5 26.9961 31.724 26.9961 32C26.9961 32.276 26.7721 32.5 26.4961 32.5Z" fill="black"/>
+                                <path d="M30.4961 32.5H28.4961C28.2201 32.5 27.9961 32.276 27.9961 32C27.9961 31.724 28.2201 31.5 28.4961 31.5H30.4961C31.8751 31.5 32.9961 30.378 32.9961 29C32.9961 27.622 31.8751 26.5 30.4961 26.5C30.2201 26.5 29.9961 26.276 29.9961 26C29.9961 25.724 30.2201 25.5 30.4961 25.5C32.4261 25.5 33.9961 27.07 33.9961 29C33.9961 30.93 32.4261 32.5 30.4961 32.5Z" fill="black"/>
+                                <path d="M26.9963 27.9992C26.8683 27.9992 26.7403 27.9502 26.6423 27.8532C26.4473 27.6582 26.4473 27.3412 26.6423 27.1462L27.7893 25.9992L26.6433 24.8532C26.4483 24.6582 26.4483 24.3413 26.6433 24.1462C26.8383 23.9513 27.1553 23.9513 27.3503 24.1462L28.8503 25.6463C29.0453 25.8412 29.0453 26.1582 28.8503 26.3532L27.3503 27.8532C27.2523 27.9502 27.1243 27.9992 26.9963 27.9992Z" fill="black"/>
+                                <path d="M29.9963 33.9993C29.8683 33.9993 29.7403 33.9503 29.6423 33.8533L28.1423 32.3533C27.9473 32.1583 27.9473 31.8412 28.1423 31.6463L29.6423 30.1462C29.8373 29.9513 30.1543 29.9513 30.3493 30.1462C30.5443 30.3413 30.5443 30.6583 30.3493 30.8533L29.2033 31.9993L30.3493 33.1453C30.5443 33.3403 30.5443 33.6573 30.3493 33.8523C30.2523 33.9503 30.1243 33.9993 29.9963 33.9993Z" fill="black"/>
+                                <path d="M21.5 33C15.159 33 10 27.841 10 21.5C10 15.159 15.159 10 21.5 10C27.841 10 33 15.159 33 21.5C33 21.574 32.994 23.324 32.466 24.681C32.365 24.938 32.075 25.066 31.819 24.966C31.562 24.866 31.434 24.576 31.535 24.319C31.902 23.371 32 22.061 32 21.5C32 15.71 27.29 11 21.5 11C15.71 11 11 15.71 11 21.5C11 27.29 15.71 32 21.5 32C21.89 32 22.274 31.975 22.653 31.934C22.923 31.904 23.174 32.101 23.205 32.377C23.235 32.651 23.037 32.898 22.763 32.928C22.317 32.977 21.904 33 21.5 33Z" fill="black"/>
+                                <path d="M21.5 33C17.855 33 15 27.949 15 21.5C15 15.051 17.855 10 21.5 10C25.145 10 28 15.051 28 21.5C28 21.776 27.776 22 27.5 22C27.224 22 27 21.776 27 21.5C27 15.809 24.481 11 21.5 11C18.519 11 16 15.809 16 21.5C16 27.191 18.519 32 21.5 32C21.776 32 22 32.224 22 32.5C22 32.776 21.776 33 21.5 33Z" fill="black"/>
+                                <path d="M21.5 33C21.224 33 21 32.776 21 32.5V10.5C21 10.224 21.224 10 21.5 10C21.776 10 22 10.224 22 10.5V32.5C22 32.776 21.776 33 21.5 33Z" fill="black"/>
+                                <path d="M32.5 22H10.5C10.224 22 10 21.776 10 21.5C10 21.224 10.224 21 10.5 21H32.5C32.776 21 33 21.224 33 21.5C33 21.776 32.776 22 32.5 22Z" fill="black"/>
+                                <path d="M30.5 16H12.5C12.224 16 12 15.776 12 15.5C12 15.224 12.224 15 12.5 15H30.5C30.776 15 31 15.224 31 15.5C31 15.776 30.776 16 30.5 16Z" fill="black"/>
+                                <path d="M21.5 28H12.5C12.224 28 12 27.776 12 27.5C12 27.224 12.224 27 12.5 27H21.5C21.776 27 22 27.224 22 27.5C22 27.776 21.776 28 21.5 28Z" fill="black"/>
+                                <path d="M27.5 23C27.224 23 27 22.776 27 22.5V21.5C27 21.224 27.224 21 27.5 21C27.776 21 28 21.224 28 21.5V22.5C28 22.776 27.776 23 27.5 23Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <section class="main">
+                <img src="main-bg.png" alt="" class="main__bg">
+                <div class="site-holder">
+                    <div class="main__content">
+                        <div class="main__column">
+                            <h1 class="main__title" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">Explore new opportunities in financial&nbsp;investing <b>with NextFi token</b></h1>
+                            <div class="m-main__img-wrapper">
+                                <img src="main-img.png" alt="">
+                            </div>
+                            <span class="main__description" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">Modern AI solutions provide reliable tokenomics, sustained growth in investments, and ensure the safety of your funds.</span>
+                            <div class="main__buttons" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                                <a href="" class="btn btn-blue">Sign Up</a>
+                                <a href="" class="btn btn-transparent">Log In</a>
+                            </div>
+                        </div>
+                        <div class="main__img-wrapper">
+                            <img src="main-img.png" alt="" class="main-img">
+                        </div>
+                    </div>
+                    <div class="main__values" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                        <div class="main__values-item">
+                            <span class="values-item__count">$65 B</span>
+                            <span class="values-item__name">Investment Volume</span>
+                        </div>
+                        <div class="main__values-item">
+                            <span class="values-item__count">$350 M</span>
+                            <span class="values-item__name">Payout Volume in 24 Hours</span>
+                        </div>
+                        <div class="main__values-item">
+                            <span class="values-item__count">+750</span>
+                            <span class="values-item__name">All Users</span>
+                        </div>
+                        <div class="main__values-item">
+                            <span class="values-item__count">+230 K</span>
+                            <span class="values-item__name">Bonus Received</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="era">
+                <img src="era-bg.png" alt="" class="era__bg" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                <img src="era-phone.png" alt="" class="era__phone" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                <div class="site-holder">
+                    <div class="era__content">
+                        <div class="era__column">
+                            <h2 class="era__title" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true"><b>NextFi</b> – a new era in the world of financial investments based <b>on artificial intelligence</b></h2>
+                            <p class="era__description" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                                Modern artificial intelligence technologies have been trained by hundreds of the best programmers based on data from the largest investment assets and funds.&nbsp; As a result, the Next technologies individually generate a percentage of investments for partners and create liquidity for the NextFi token.
+                            </p>
+                            <div class="era__bottom" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                                <a href="" class="btn btn-blue">Buy coin</a>
+                                <div class="era__bottom-info">
+                                    <div class="era__bottom-info__item">
+                                        <span class="era__bottom-title">50&nbsp;000+</span>
+                                        <p class="era__bottom-description">Computational operations for market analysis with continuous improvement of AI</p>
+                                    </div>
+                                    <div class="era__bottom-info__item">
+                                        <span class="era__bottom-title">75% of Users</span>
+                                        <p class="era__bottom-description">Make repeated investments in the NextFi investment system</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="era__stats" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                            <div class="era__stats-text">
+                                <div class="era__stats-item">
+                                    <span class="era__stats-item__title">Up to X% growth per year</span>
+                                    <p class="era__stats-item__text">Daily growth of your capital with the ability to track in real time and secure profits at any moment.</p>
+                                </div>
+                                <div class="era__stats-item">
+                                    <span class="era__stats-item__title">Up to X% bonuses on savings balance</span>
+                                    <p class="era__stats-item__text">Earning smart interest on the amount of your investments in your personal account.</p>
+                                </div>
+                            </div>
+                            <div class="era__stats-wrapper">
+                                <img src="era-stats.png" alt="">
+                            </div>
+                            <div class="era__stats-values">
+                                <span class="era__stats-values__item">
+                                    X% + SMART% bonuses for 1 month
+                                </span>
+                                <span class="era__stats-values__item">
+                                    X% + SMART% bonuses for 3 months
+                                </span>
+                                <span class="era__stats-values__item">
+                                    X% + SMART% bonuses for 6 months
+                                </span>
+                            </div>
+                        </div>
+                        <div class="download-links" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                            <a href="" class="download-item">
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="56" height="56" fill="url(#pattern0_250_67953)"/>
+                                    <defs>
+                                        <pattern id="pattern0_250_67953" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                            <use xlink:href="#image0_250_67953" transform="scale(0.0078125)"/>
+                                        </pattern>
+                                        <image id="image0_250_67953" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="" class="download-item">
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11116 5.37603C8.58616 5.93953 8.28516 6.80753 8.28516 7.93569V48.0504C8.28516 49.1785 8.58616 50.0465 9.13099 50.5902L9.27332 50.7104L31.7503 28.2334V27.7282L9.25349 5.25586L9.11116 5.37603Z" fill="url(#paint0_linear_250_67950)"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2275 35.7546L31.7305 28.2553V27.7303L39.2298 20.231L39.392 20.3313L48.2621 25.3725C50.802 26.804 50.802 29.163 48.2621 30.6143L39.392 35.6555C39.3896 35.6543 39.2275 35.7546 39.2275 35.7546Z" fill="url(#paint1_linear_250_67950)"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M39.3879 35.6547L31.7287 27.9932L9.10938 50.6125C9.93537 51.5003 11.326 51.6007 12.88 50.7327L39.3879 35.6547Z" fill="url(#paint2_linear_250_67950)"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M39.3879 20.334L12.88 5.27582C11.3284 4.38799 9.93537 4.50816 9.10938 5.39599L31.7264 27.9932L39.3879 20.334Z" fill="url(#paint3_linear_250_67950)"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_250_67950" x1="45.1413" y1="-7.9259" x2="-3.36485" y2="5.00775" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#047ED6"/>
+                                            <stop offset="1" stop-color="#50E6FF"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_250_67950" x1="51.5702" y1="27.991" x2="26.423" y2="27.991" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#FFDA1C"/>
+                                            <stop offset="1" stop-color="#FEB705"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint2_linear_250_67950" x1="35.2165" y1="32.1565" x2="6.31672" y2="80.8051" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#D9414F"/>
+                                            <stop offset="1" stop-color="#8C193F"/>
+                                        </linearGradient>
+                                        <linearGradient id="paint3_linear_250_67950" x1="3.41168" y1="-7.97213" x2="16.304" y2="13.7573" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#33C481"/>
+                                            <stop offset="1" stop-color="#61E3A7"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="" class="download-item">
+                                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M39.55 7H16.45C11.2303 7 7 11.2303 7 16.45V39.55C7 44.7685 11.2303 49 16.45 49H39.55C44.7697 49 49 44.7685 49 39.55V16.45C49 11.2303 44.7697 7 39.55 7Z" fill="url(#paint0_linear_250_67947)"/>
+                                    <path opacity="0.05" d="M14.3503 36.1396C12.7426 36.1396 11.4336 34.8399 11.4336 33.2416C11.4336 31.6433 12.7426 30.3436 14.3503 30.3436H18.7813L24.4618 20.6498L22.8016 17.8159C22.4073 17.1416 22.2988 16.3564 22.4959 15.6028C22.6931 14.8491 23.1726 14.2168 23.8446 13.8248C24.2926 13.5634 24.8013 13.4258 25.3169 13.4258C26.3494 13.4258 27.3143 13.9788 27.8346 14.8689L27.8428 14.8829L27.8498 14.8701C28.3689 13.9799 29.3338 13.4269 30.3674 13.4269C30.8843 13.4269 31.3929 13.5658 31.8409 13.8271C33.2293 14.6414 33.6959 16.4323 32.8816 17.8194L25.5421 30.3448H29.4248L29.7666 30.6889C30.0256 30.9491 30.2624 31.2443 30.4934 31.5919L30.7233 31.9769C31.2938 33.0398 31.4209 34.2146 31.0954 35.3066L30.8493 36.1396H14.3503Z" fill="black"/>
+                                    <path opacity="0.07" d="M14.349 35.5566C13.0621 35.5566 12.0156 34.5183 12.0156 33.242C12.0156 31.9656 13.0621 30.9273 14.349 30.9273H19.1136L25.136 20.6501L23.302 17.5211C22.987 16.9833 22.8995 16.3545 23.0581 15.7501C23.2156 15.147 23.5983 14.6418 24.1361 14.328C24.4943 14.1191 24.9015 14.0083 25.3145 14.0083C26.1405 14.0083 26.9128 14.4505 27.3293 15.1621L27.8403 16.036L28.3513 15.1633C28.7666 14.4516 29.539 14.0095 30.365 14.0095C30.778 14.0095 31.1851 14.1203 31.5433 14.3291C32.654 14.9813 33.0261 16.414 32.3751 17.5235L24.5223 30.9273H29.1796L29.35 31.0988C29.581 31.331 29.7945 31.597 30.0033 31.9131L30.2191 32.2748C30.7068 33.186 30.8153 34.1951 30.5341 35.1401L30.4105 35.5566H14.349Z" fill="black"/>
+                                    <path d="M29.5206 32.2349C29.3479 31.9736 29.1566 31.7286 28.9396 31.5105H23.5076L31.8761 17.2281C32.3649 16.394 32.0849 15.3218 31.2519 14.833C30.4166 14.3441 29.3444 14.6241 28.8579 15.4583L27.8429 17.1896L26.8279 15.4571C26.3402 14.623 25.2681 14.3441 24.4339 14.8318C23.5997 15.3195 23.3197 16.3916 23.8086 17.2258L25.8152 20.65L19.4511 31.5105H14.3516C13.3844 31.5105 12.6016 32.2863 12.6016 33.2418C12.6016 34.1973 13.3844 34.9731 14.3516 34.9731H29.9779C30.2042 34.2113 30.1424 33.3608 29.7201 32.5721L29.5206 32.2349Z" fill="white"/>
+                                    <path opacity="0.05" d="M16.9163 42.2087C16.3994 42.2087 15.8908 42.0698 15.4428 41.8073C14.7708 41.413 14.2924 40.7807 14.0953 40.027C13.8993 39.2733 14.0078 38.487 14.4021 37.815L15.2339 36.394L15.7473 36.2913C16.1684 36.2085 16.5616 36.1665 16.9489 36.1665L17.0866 36.1677C18.3478 36.205 19.4899 36.744 20.3136 37.6843L20.8689 38.3167L19.4351 40.7667C18.9124 41.6568 17.9488 42.2087 16.9163 42.2087Z" fill="black"/>
+                                    <path opacity="0.07" d="M16.9151 41.6255C16.5021 41.6255 16.0938 41.5147 15.7368 41.3047C15.2001 40.9897 14.8163 40.4833 14.6588 39.8802C14.5013 39.277 14.5876 38.6482 14.9038 38.1103L15.6038 36.9157L15.8605 36.8643C16.2443 36.7873 16.6001 36.75 16.9478 36.75L17.0785 36.7512C18.167 36.7838 19.1586 37.2517 19.8738 38.0683L20.1515 38.3845L18.93 40.4717C18.5135 41.1833 17.7411 41.6255 16.9151 41.6255Z" fill="black"/>
+                                    <path d="M17.064 37.3356C16.6941 37.3251 16.3313 37.366 15.9766 37.4371L15.4085 38.4066C14.9196 39.2408 15.1996 40.313 16.0338 40.8018C16.3115 40.9651 16.6171 41.0421 16.917 41.0421C17.5178 41.0421 18.1035 40.7318 18.4278 40.1776L19.437 38.4545C18.8688 37.8058 18.0486 37.3648 17.0686 37.3356H17.064Z" fill="white"/>
+                                    <path opacity="0.05" d="M38.7673 42.2086C37.7348 42.2086 36.77 41.6556 36.2497 40.7666L29.2182 28.7674L29.1983 28.7068C28.7118 27.2029 28.8075 25.6524 29.448 24.2816L31.3952 20.9473L36.9018 30.3448H41.6502C43.2578 30.3448 44.5668 31.6444 44.5668 33.2428C44.5668 34.8411 43.2578 36.1408 41.6502 36.1408H40.298L41.2803 37.8173C41.6747 38.4893 41.7832 39.2744 41.5872 40.0293C41.3912 40.7841 40.9117 41.4153 40.2397 41.8096C39.794 42.0698 39.2853 42.2086 38.7673 42.2086Z" fill="black"/>
+                                    <path opacity="0.07" d="M38.7671 41.6257C37.9411 41.6257 37.1688 41.1847 36.7523 40.4731L29.7523 28.5287L29.7324 28.4681C29.3113 27.1637 29.3964 25.7649 29.9751 24.5294L31.3938 22.1016L36.5656 30.9274H41.6499C42.9368 30.9274 43.9833 31.9657 43.9833 33.2421C43.9833 34.5184 42.9368 35.5567 41.6499 35.5567H39.2804L40.7773 38.1117C41.0934 38.6496 41.1798 39.2784 41.0223 39.8816C40.8648 40.4847 40.4821 40.9911 39.9443 41.3061C39.5884 41.5149 39.1813 41.6257 38.7671 41.6257Z" fill="black"/>
+                                    <path d="M41.6502 31.5107H36.2334L31.3952 23.2554L30.505 24.7755C29.987 25.8839 29.917 27.1369 30.2892 28.2884L37.2565 40.1779C37.582 40.7332 38.1665 41.0424 38.7674 41.0424C39.0672 41.0424 39.3729 40.9654 39.6505 40.802C40.4847 40.3132 40.7635 39.241 40.2747 38.4069L38.2622 34.9734H41.6502C42.6174 34.9734 43.4002 34.1975 43.4002 33.242C43.4002 32.2865 42.6174 31.5107 41.6502 31.5107Z" fill="white"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_250_67947" x1="28" y1="5.3865" x2="28" y2="46.7787" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#33BEF0"/>
+                                            <stop offset="1" stop-color="#0A85D9"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="how">
+                <div class="site-holder">
+                    <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">How is income <b>from investments formed?</b></h2>
+                    <div class="how__content">
+                        <div class="how__row">
+                            <div class="how__item" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_481)"/>
+                                    <path d="M62.668 83.9998C62.668 86.9454 65.0558 89.3332 68.0013 89.3332C70.9468 89.3332 73.3346 86.9454 73.3346 83.9998V51.9998C73.3346 49.0543 70.9468 46.6665 68.0013 46.6665C65.0558 46.6665 62.668 49.0543 62.668 51.9998V83.9998ZM46.668 83.9998C46.668 86.9454 49.0558 89.3332 52.0013 89.3332C54.9468 89.3332 57.3346 86.9454 57.3346 83.9998V73.3332C57.3346 70.3877 54.9468 67.9998 52.0013 67.9998C49.0558 67.9998 46.668 70.3877 46.668 73.3332V83.9998ZM84.0013 59.9998C81.0558 59.9998 78.668 62.3877 78.668 65.3332V83.9998C78.668 86.9454 81.0558 89.3332 84.0013 89.3332C86.9468 89.3332 89.3346 86.9454 89.3346 83.9998V65.3332C89.3346 62.3877 86.9468 59.9998 84.0013 59.9998Z" fill="white"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_100_481" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                            <stop offset="1" stop-color="#073D95"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="how__item-content">
+                                    <span class="how__item-title">Company Stocks</span>
+                                    <span class="how__item-text">Tracking successful promotions and ensuring financial security in trading on the market.</span>
+                                </div>
+                            </div>
+                            <div class="how__item big-item" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_b_100_485)">
+                                        <path d="M95.4064 2.72644C98.2382 1.04569 101.762 1.04569 104.594 2.72644L143 25.5218L181.945 47.3851C184.816 48.9971 186.578 52.0486 186.538 55.3414L186 100L186.538 144.659C186.578 147.951 184.816 151.003 181.945 152.615L143 174.478L104.594 197.274C101.762 198.954 98.2382 198.954 95.4064 197.274L57 174.478L18.0554 152.615C15.184 151.003 13.4221 147.951 13.4618 144.659L14 100L13.4618 55.3414C13.4221 52.0486 15.184 48.9971 18.0554 47.3851L57 25.5218L95.4064 2.72644Z" fill="#1B55BD" fill-opacity="0.6"/>
+                                    </g>
+                                    <path d="M95.4064 34.7264C98.2382 33.0457 101.762 33.0457 104.594 34.7264L129.24 49.3548L154.232 63.385C157.103 64.9971 158.865 68.0486 158.825 71.3414L158.48 100L158.825 128.659C158.865 131.951 157.103 135.003 154.232 136.615L129.24 150.645L104.594 165.274C101.762 166.954 98.2382 166.954 95.4064 165.274L70.76 150.645L45.7682 136.615C42.8968 135.003 41.135 131.951 41.1746 128.659L41.52 100L41.1746 71.3414C41.135 68.0486 42.8968 64.9971 45.7682 63.385L70.76 49.3548L95.4064 34.7264Z" fill="white"/>
+                                    <path d="M95.4062 42.9686C98.238 41.2879 101.762 41.2879 104.593 42.9686L125.696 55.4934L147.093 67.506C149.965 69.118 151.727 72.1696 151.687 75.4624L151.391 99.9998L151.687 124.537C151.727 127.83 149.965 130.881 147.093 132.494L125.696 144.506L104.593 157.031C101.762 158.712 98.238 158.712 95.4062 157.031L74.304 144.506L52.9061 132.493C50.0347 130.881 48.2729 127.83 48.3126 124.537L48.6082 99.9998L48.3126 75.4624C48.2729 72.1696 50.0347 69.118 52.9061 67.506L74.304 55.4934L95.4062 42.9686Z" fill="#205BC9"/>
+                                    <path d="M95.4062 42.9686C98.238 41.2879 101.762 41.2879 104.593 42.9686L125.696 55.4934L147.093 67.506C149.965 69.118 151.727 72.1696 151.687 75.4624L151.391 99.9998L151.687 124.537C151.727 127.83 149.965 130.881 147.093 132.494L125.696 144.506L104.593 157.031C101.762 158.712 98.238 158.712 95.4062 157.031L74.304 144.506L52.9061 132.493C50.0347 130.881 48.2729 127.83 48.3126 124.537L48.6082 99.9998L48.3126 75.4624C48.2729 72.1696 50.0347 69.118 52.9061 67.506L74.304 55.4934L95.4062 42.9686Z" fill="url(#paint0_linear_100_485)"/>
+                                    <g clip-path="url(#clip0_100_485)">
+                                        <path d="M91.32 97.9733V88C91.32 84.32 94.3067 81.3333 97.9867 81.3333C101.667 81.3333 104.653 84.32 104.653 88V97.9733C107.867 95.8267 109.987 92.16 109.987 88C109.987 81.3733 104.613 76 97.9867 76C91.36 76 85.9867 81.3733 85.9867 88C85.9867 92.16 88.1067 95.8267 91.32 97.9733ZM117.547 110.32L105.44 104.293C104.987 104.107 104.507 104 103.987 104H101.987V88C101.987 85.7867 100.2 84 97.9867 84C95.7733 84 93.9867 85.7867 93.9867 88V116.627L84.8533 114.72C84.6533 114.68 84.44 114.653 84.2267 114.653C83.4 114.653 82.6533 115 82.1067 115.533L80 117.667L93.1733 130.84C93.9067 131.56 94.9067 132.013 96 132.013H114.12C116.133 132.013 117.667 130.533 117.947 128.6L119.96 114.547C119.987 114.36 120 114.187 120 114C119.987 112.347 118.973 110.92 117.547 110.32Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_b_100_485" x="7.46094" y="-4.53418" width="185.078" height="209.068" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="3"/>
+                                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_100_485"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_100_485" result="shape"/>
+                                        </filter>
+                                        <linearGradient id="paint0_linear_100_485" x1="135.545" y1="67.0301" x2="54.1513" y2="144.303" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                            <stop offset="1" stop-color="#073D95"/>
+                                        </linearGradient>
+                                        <clipPath id="clip0_100_485">
+                                            <rect width="64" height="64" fill="white" transform="translate(68 68)"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div class="how__item-content">
+                                    <span class="how__item-title">Artificial Intelligence</span>
+                                    <span class="how__item-text">They are the primary tool for conducting transactions in the financial market and the key to earning income from investments in the NextFi token.</span>
+                                </div>
+                            </div>
+                            <div class="how__item" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_578)"/>
+                                    <path d="M54.5 89C60.299 89 65 84.299 65 78.5C65 72.701 60.299 68 54.5 68C48.701 68 44 72.701 44 78.5C44 84.299 48.701 89 54.5 89Z" fill="white"/>
+                                    <path d="M77.5 90C81.0899 90 84 87.0899 84 83.5C84 79.9101 81.0899 77 77.5 77C73.9101 77 71 79.9101 71 83.5C71 87.0899 73.9101 90 77.5 90Z" fill="white"/>
+                                    <path d="M78 72C85.732 72 92 65.732 92 58C92 50.268 85.732 44 78 44C70.268 44 64 50.268 64 58C64 65.732 70.268 72 78 72Z" fill="white"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_100_578" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                            <stop offset="1" stop-color="#073D95"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="how__item-content">
+                                    <span class="how__item-title">Precious Metals</span>
+                                    <span class="how__item-text">Constantly increasing assets and executing profitable transactions with them.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how__row" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                            <div class="how__item">
+                                <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_665)"/>
+                                    <path d="M46.6654 62.6665V81.3332H54.6654V62.6665H46.6654ZM62.6654 62.6665V81.3332H70.6654V62.6665H62.6654ZM41.332 94.6665H91.9987V86.6665H41.332V94.6665ZM78.6654 62.6665V81.3332H86.6654V62.6665H78.6654ZM66.6654 38.6665L41.332 51.9998V57.3332H91.9987V51.9998L66.6654 38.6665Z" fill="white"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_100_665" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                            <stop offset="1" stop-color="#073D95"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="how__item-content">
+                                    <span class="how__item-title">Corporate Bonds</span>
+                                    <span class="how__item-text">Ownership of more than X bonds with regular updates and profitable financial transactions related to them.</span>
+                                </div>
+                            </div>
+                            <div class="how__item">
+                                <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_677)"/>
+                                    <path d="M82.8575 57.2149L68 42L53.1425 57.2149C49.0475 61.4158 47 67.0171 47 72.4029C47 77.7887 49.0475 83.4707 53.1425 87.6717C57.2375 91.8726 62.6188 94 68 94C73.3813 94 78.7625 91.8726 82.8575 87.6717C86.9525 83.4707 89 77.7887 89 72.4029C89 67.0171 86.9525 61.4158 82.8575 57.2149ZM52.25 73.3723C52.2762 67.9865 53.8775 64.5665 56.87 61.5236L68 49.8633L79.13 61.6582C82.1225 64.6743 83.7238 67.9865 83.75 73.3723H52.25Z" fill="white"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_100_677" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                            <stop offset="1" stop-color="#073D95"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="how__item-content">
+                                    <span class="how__item-title">Oil Sector</span>
+                                    <span class="how__item-text">Smart and efficient trading of oil products in the eastern market</span>
+                                </div>
+                            </div>
+                            <div class="how__item">
+                                <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                    <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_688)"/>
+                                    <path d="M76 85.3333C69.32 85.3333 63.52 81.5467 60.6267 76H76V70.6667H58.8933C58.76 69.8 58.6667 68.9067 58.6667 68C58.6667 67.0933 58.76 66.2 58.8933 65.3333H76V60H60.6267C63.52 54.4533 69.3067 50.6667 76 50.6667C80.3067 50.6667 84.24 52.24 87.2667 54.84L92 50.1333C87.76 46.3333 82.1467 44 76 44C65.56 44 56.6933 50.68 53.4 60H44V65.3333H52.16C52.0533 66.2133 52 67.0933 52 68C52 68.9067 52.0533 69.7867 52.16 70.6667H44V76H53.4C56.6933 85.32 65.56 92 76 92C82.1467 92 87.76 89.6667 92 85.8667L87.2667 81.1467C84.24 83.7467 80.3067 85.3333 76 85.3333Z" fill="white"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_100_688" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                            <stop offset="1" stop-color="#073D95"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="how__item-content">
+                                    <span class="how__item-title">Innovative Startups</span>
+                                    <span class="how__item-text">Analysis and search for the most promising projects aimed at acquiring a stake and subsequent growth of dividends.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-how__content">
+                        <div class="swiper how-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="how__item big-item">
+                                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g filter="url(#filter0_b_100_485)">
+                                                <path d="M95.4064 2.72644C98.2382 1.04569 101.762 1.04569 104.594 2.72644L143 25.5218L181.945 47.3851C184.816 48.9971 186.578 52.0486 186.538 55.3414L186 100L186.538 144.659C186.578 147.951 184.816 151.003 181.945 152.615L143 174.478L104.594 197.274C101.762 198.954 98.2382 198.954 95.4064 197.274L57 174.478L18.0554 152.615C15.184 151.003 13.4221 147.951 13.4618 144.659L14 100L13.4618 55.3414C13.4221 52.0486 15.184 48.9971 18.0554 47.3851L57 25.5218L95.4064 2.72644Z" fill="#1B55BD" fill-opacity="0.6"/>
+                                            </g>
+                                            <path d="M95.4064 34.7264C98.2382 33.0457 101.762 33.0457 104.594 34.7264L129.24 49.3548L154.232 63.385C157.103 64.9971 158.865 68.0486 158.825 71.3414L158.48 100L158.825 128.659C158.865 131.951 157.103 135.003 154.232 136.615L129.24 150.645L104.594 165.274C101.762 166.954 98.2382 166.954 95.4064 165.274L70.76 150.645L45.7682 136.615C42.8968 135.003 41.135 131.951 41.1746 128.659L41.52 100L41.1746 71.3414C41.135 68.0486 42.8968 64.9971 45.7682 63.385L70.76 49.3548L95.4064 34.7264Z" fill="white"/>
+                                            <path d="M95.4062 42.9686C98.238 41.2879 101.762 41.2879 104.593 42.9686L125.696 55.4934L147.093 67.506C149.965 69.118 151.727 72.1696 151.687 75.4624L151.391 99.9998L151.687 124.537C151.727 127.83 149.965 130.881 147.093 132.494L125.696 144.506L104.593 157.031C101.762 158.712 98.238 158.712 95.4062 157.031L74.304 144.506L52.9061 132.493C50.0347 130.881 48.2729 127.83 48.3126 124.537L48.6082 99.9998L48.3126 75.4624C48.2729 72.1696 50.0347 69.118 52.9061 67.506L74.304 55.4934L95.4062 42.9686Z" fill="#205BC9"/>
+                                            <path d="M95.4062 42.9686C98.238 41.2879 101.762 41.2879 104.593 42.9686L125.696 55.4934L147.093 67.506C149.965 69.118 151.727 72.1696 151.687 75.4624L151.391 99.9998L151.687 124.537C151.727 127.83 149.965 130.881 147.093 132.494L125.696 144.506L104.593 157.031C101.762 158.712 98.238 158.712 95.4062 157.031L74.304 144.506L52.9061 132.493C50.0347 130.881 48.2729 127.83 48.3126 124.537L48.6082 99.9998L48.3126 75.4624C48.2729 72.1696 50.0347 69.118 52.9061 67.506L74.304 55.4934L95.4062 42.9686Z" fill="url(#paint0_linear_100_485)"/>
+                                            <g clip-path="url(#clip0_100_485)">
+                                                <path d="M91.32 97.9733V88C91.32 84.32 94.3067 81.3333 97.9867 81.3333C101.667 81.3333 104.653 84.32 104.653 88V97.9733C107.867 95.8267 109.987 92.16 109.987 88C109.987 81.3733 104.613 76 97.9867 76C91.36 76 85.9867 81.3733 85.9867 88C85.9867 92.16 88.1067 95.8267 91.32 97.9733ZM117.547 110.32L105.44 104.293C104.987 104.107 104.507 104 103.987 104H101.987V88C101.987 85.7867 100.2 84 97.9867 84C95.7733 84 93.9867 85.7867 93.9867 88V116.627L84.8533 114.72C84.6533 114.68 84.44 114.653 84.2267 114.653C83.4 114.653 82.6533 115 82.1067 115.533L80 117.667L93.1733 130.84C93.9067 131.56 94.9067 132.013 96 132.013H114.12C116.133 132.013 117.667 130.533 117.947 128.6L119.96 114.547C119.987 114.36 120 114.187 120 114C119.987 112.347 118.973 110.92 117.547 110.32Z" fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <filter id="filter0_b_100_485" x="7.46094" y="-4.53418" width="185.078" height="209.068" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="3"/>
+                                                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_100_485"/>
+                                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_100_485" result="shape"/>
+                                                </filter>
+                                                <linearGradient id="paint0_linear_100_485" x1="135.545" y1="67.0301" x2="54.1513" y2="144.303" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#073D95"/>
+                                                </linearGradient>
+                                                <clipPath id="clip0_100_485">
+                                                    <rect width="64" height="64" fill="white" transform="translate(68 68)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <div class="how__item-content">
+                                            <span class="how__item-title">Artificial Intelligence</span>
+                                            <span class="how__item-text">They are the primary tool for conducting transactions in the financial market and the key to earning income from investments in the NextFi token.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="how__item">
+                                        <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_481)"/>
+                                            <path d="M62.668 83.9998C62.668 86.9454 65.0558 89.3332 68.0013 89.3332C70.9468 89.3332 73.3346 86.9454 73.3346 83.9998V51.9998C73.3346 49.0543 70.9468 46.6665 68.0013 46.6665C65.0558 46.6665 62.668 49.0543 62.668 51.9998V83.9998ZM46.668 83.9998C46.668 86.9454 49.0558 89.3332 52.0013 89.3332C54.9468 89.3332 57.3346 86.9454 57.3346 83.9998V73.3332C57.3346 70.3877 54.9468 67.9998 52.0013 67.9998C49.0558 67.9998 46.668 70.3877 46.668 73.3332V83.9998ZM84.0013 59.9998C81.0558 59.9998 78.668 62.3877 78.668 65.3332V83.9998C78.668 86.9454 81.0558 89.3332 84.0013 89.3332C86.9468 89.3332 89.3346 86.9454 89.3346 83.9998V65.3332C89.3346 62.3877 86.9468 59.9998 84.0013 59.9998Z" fill="white"/>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_100_481" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#073D95"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <div class="how__item-content">
+                                            <span class="how__item-title">Company Stocks</span>
+                                            <span class="how__item-text">Tracking successful promotions and ensuring financial security in trading on the market.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="how__item">
+                                        <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_578)"/>
+                                            <path d="M54.5 89C60.299 89 65 84.299 65 78.5C65 72.701 60.299 68 54.5 68C48.701 68 44 72.701 44 78.5C44 84.299 48.701 89 54.5 89Z" fill="white"/>
+                                            <path d="M77.5 90C81.0899 90 84 87.0899 84 83.5C84 79.9101 81.0899 77 77.5 77C73.9101 77 71 79.9101 71 83.5C71 87.0899 73.9101 90 77.5 90Z" fill="white"/>
+                                            <path d="M78 72C85.732 72 92 65.732 92 58C92 50.268 85.732 44 78 44C70.268 44 64 50.268 64 58C64 65.732 70.268 72 78 72Z" fill="white"/>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_100_578" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#073D95"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <div class="how__item-content">
+                                            <span class="how__item-title">Precious Metals</span>
+                                            <span class="how__item-text">Constantly increasing assets and executing profitable transactions with them.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="how__item">
+                                        <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_665)"/>
+                                            <path d="M46.6654 62.6665V81.3332H54.6654V62.6665H46.6654ZM62.6654 62.6665V81.3332H70.6654V62.6665H62.6654ZM41.332 94.6665H91.9987V86.6665H41.332V94.6665ZM78.6654 62.6665V81.3332H86.6654V62.6665H78.6654ZM66.6654 38.6665L41.332 51.9998V57.3332H91.9987V51.9998L66.6654 38.6665Z" fill="white"/>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_100_665" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#073D95"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <div class="how__item-content">
+                                            <span class="how__item-title">Corporate Bonds</span>
+                                            <span class="how__item-text">Ownership of more than X bonds with regular updates and profitable financial transactions related to them.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="how__item">
+                                        <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_677)"/>
+                                            <path d="M82.8575 57.2149L68 42L53.1425 57.2149C49.0475 61.4158 47 67.0171 47 72.4029C47 77.7887 49.0475 83.4707 53.1425 87.6717C57.2375 91.8726 62.6188 94 68 94C73.3813 94 78.7625 91.8726 82.8575 87.6717C86.9525 83.4707 89 77.7887 89 72.4029C89 67.0171 86.9525 61.4158 82.8575 57.2149ZM52.25 73.3723C52.2762 67.9865 53.8775 64.5665 56.87 61.5236L68 49.8633L79.13 61.6582C82.1225 64.6743 83.7238 67.9865 83.75 73.3723H52.25Z" fill="white"/>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_100_677" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#073D95"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <div class="how__item-content">
+                                            <span class="how__item-title">Oil Sector</span>
+                                            <span class="how__item-text">Smart and efficient trading of oil products in the eastern market</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="how__item">
+                                        <svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M96.9848 17.7848L96.9847 17.7849L96.9952 17.7908L121.987 31.821C124.699 33.3435 126.363 36.2255 126.325 39.3354L125.98 67.994H125.98L125.98 68.006L126.325 96.6646C126.363 99.7745 124.699 102.656 121.987 104.179L96.9952 118.209L96.9952 118.209L96.9848 118.215L72.3384 132.844C69.6639 134.431 66.3361 134.431 63.6616 132.844L39.0152 118.215L39.0153 118.215L39.0048 118.209L14.013 104.179C11.3011 102.656 9.63713 99.7745 9.6746 96.6646L10.02 68.006H10.0201L10.02 67.994L9.6746 39.3354C9.63713 36.2255 11.3011 33.3435 14.013 31.821L39.0048 17.7908L39.0048 17.791L39.0152 17.7848L63.6616 3.15641C66.3361 1.56903 69.6639 1.56903 72.3384 3.15641L96.9848 17.7848Z" stroke="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="#205BC9"/>
+                                            <path d="M63.4062 10.9686C66.238 9.28788 69.7616 9.28788 72.5934 10.9686L93.6955 23.4934L115.093 35.506C117.965 37.118 119.727 40.1696 119.687 43.4624L119.391 67.9998L119.687 92.5372C119.727 95.8299 117.965 98.8815 115.093 100.494L93.6955 112.506L72.5934 125.031C69.7616 126.712 66.238 126.712 63.4062 125.031L42.304 112.506L20.9061 100.493C18.0347 98.8815 16.2729 95.8299 16.3126 92.5372L16.6082 67.9998L16.3126 43.4624C16.2729 40.1696 18.0347 37.118 20.9061 35.506L42.304 23.4934L63.4062 10.9686Z" fill="url(#paint0_linear_100_688)"/>
+                                            <path d="M76 85.3333C69.32 85.3333 63.52 81.5467 60.6267 76H76V70.6667H58.8933C58.76 69.8 58.6667 68.9067 58.6667 68C58.6667 67.0933 58.76 66.2 58.8933 65.3333H76V60H60.6267C63.52 54.4533 69.3067 50.6667 76 50.6667C80.3067 50.6667 84.24 52.24 87.2667 54.84L92 50.1333C87.76 46.3333 82.1467 44 76 44C65.56 44 56.6933 50.68 53.4 60H44V65.3333H52.16C52.0533 66.2133 52 67.0933 52 68C52 68.9067 52.0533 69.7867 52.16 70.6667H44V76H53.4C56.6933 85.32 65.56 92 76 92C82.1467 92 87.76 89.6667 92 85.8667L87.2667 81.1467C84.24 83.7467 80.3067 85.3333 76 85.3333Z" fill="white"/>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_100_688" x1="103.545" y1="35.0301" x2="22.1513" y2="112.303" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.404729" stop-color="#205BC9" stop-opacity="0"/>
+                                                    <stop offset="1" stop-color="#073D95"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <div class="how__item-content">
+                                            <span class="how__item-title">Innovative Startups</span>
+                                            <span class="how__item-text">Analysis and search for the most promising projects aimed at acquiring a stake and subsequent growth of dividends.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="levels">
+                <img src="levels-bg.png" alt="" class="levels__bg" data-aos="fade-up" data-aos-duration="2500" data-aos-once="true">
+                <div class="levels__bg-field"></div>
+                <div class="site-holder">
+                    <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">System of Personalized <b>Investment Levels.</b></h2>
+                    <p class="section-description" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Each level offers different opportunities for capital growth depending on your goals and is based on your individual investment experience and preferences.</p>
+                    <div class="swiper swiper-levels" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">5%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">10%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">15%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">20%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">25%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">30%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">35%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="swiper-slide levels-slide">
+                                <div class="levels-slide__content">
+                                    <div class="levels-slide__content-main">
+                                        <span class="levels-percent">40%</span>
+                                        <span class="levels-time">per month</span>
+                                        <span class="levels-text">Minimum amount X NextFi</span>
+                                        <span class="levels-text">Maximum amount X NextFi</span>
+                                    </div>
+                                    <div class="levels-slide__content-sub">
+                                        <span class="levels-slide__investment">Investment term</span>
+                                        <span class="levels-slide__investment-time">30 days</span>
+                                    </div>
+                                </div>
+                                <a href="" class="levels-slide__button">
+                                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 16C30.5272 16 29.3333 17.1939 29.3333 18.6667C29.3333 20.1394 30.5272 21.3333 32 21.3333H46.9067L17.88 50.36C16.8417 51.3983 16.8417 53.0817 17.88 54.12C18.9183 55.1583 20.6017 55.1583 21.64 54.12L50.6667 25.0933V40C50.6667 41.4728 51.8606 42.6667 53.3333 42.6667C54.8061 42.6667 56 41.4728 56 40V17C56 16.4477 55.5523 16 55 16H32Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar__levels"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="getstarted">
+                <div class="site-holder">
+                    <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">How to get <b>started</b></h2>
+                    <p class="section-description medium-margin" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Our goal is to create the simplest and most comfortable conditions for investing in the NextFi project.</p>
+                    <div class="getstarted__content">
+                        <div class="getstarted__row" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                            <div class="getstarted__row-item">
+                                <span class="getstated__item-title">Account creation</span>
+                                <p class="getstarted__item-text">Simple and quick registration on our platform. In just a few minutes, you'll gain access to all the features of NextFi.</p>
+                                <a href="" class="btn btn-blue">Sign Up</a>
+                            </div>
+                            <div class="getstarted__row-item">
+                                <span class="getstated__item-title">Token purchase</span>
+                                <p class="getstarted__item-text">You can purchase the NextFi token using most popular cryptocurrencies. The fixed price and bonus system allow each early user of our platform to gain maximum advantages.</p>
+                                <a href="" class="btn btn-blue">Buy a token</a>
+                            </div>
+                        </div>
+                        <div class="getstarted__big-item" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                            <span class="getstated__item-title">Investment in an investment box</span>
+                            <p class="getstarted__item-text">The convenient investment box system of NextFi offers flexible investment conditions. You can always withdraw your funds early or choose a level that matches your requirements.</p>
+                            <div class="getstarted__big-content">
+                                <div class="swiper getstarted-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="getstated__big-content__item">
+                                            <div class="getstarted__image-wrapper">
+                                                <img src="getstarted-balance.png" alt="">
+                                            </div>
+                                            <a href="" class="btn btn-blue btn-none">Top up your balance</a>
+                                        </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="getstated__big-content__item">
+                                            <div class="getstarted__image-wrapper">
+                                                <img src="getstarted-balance.png" alt="">
+                                            </div>
+                                            <a href="" class="btn btn-blue btn-none">Top up your balance</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="getstated__big-content__item">
+                                    <div class="getstarted__image-wrapper">
+                                        <img src="getstarted-balance.png" alt="">
+                                    </div>
+                                    <a href="" class="btn btn-blue btn-none">Top up your balance</a>
+                                </div>
+                                <div class="getstated__big-content__item">
+                                    <div class="getstarted__image-wrapper">
+                                        <img src="getstarted-income.png" alt="">
+                                    </div>
+                                    <a href="" class="btn btn-blue btn-none">Withdraw money</a>
+                                </div>
+                                <div class="getstarted__big-content__image">
+                                    <img src="getstarted-stats.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mobile">
+                <div class="site-holder">
+                    <div class="mobile__content" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        <div class="mobile__column">
+                            <h2 class="mobile__title">Invest anywhere,<br><b>anytime</b></h2>
+                            <span class="mobile__description">
+                                Instantly open new positions on the NextFi website and app
+                            </span>
+                            <div class="mobile__qr">
+                                <span class="mobile__qr-text">Point your phone to download the App</span>
+                                <div class="mobile__qr-img">
+                                    <img src="mobile-qr.png" alt="">
+                                </div>
+                            </div>
+                            <div class="mobile__more">
+                                <div class="mobile__download">
+                                    <span class="mobile__download-title">
+                                        Download
+                                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26.5342 25.1919C27.2214 24.581 26.7893 23.4444 25.8698 23.4444H23.625V10.625C23.625 9.72754 22.8975 9 22 9C21.1025 9 20.375 9.72754 20.375 10.625V22.4444C20.375 22.9967 19.9273 23.4444 19.375 23.4444H18.1302C17.2107 23.4444 16.7786 24.581 17.4658 25.1919L21.3356 28.6317C21.7145 28.9685 22.2855 28.9685 22.6644 28.6317L26.5342 25.1919ZM9 32.1111C9 33.7066 10.2934 35 11.8889 35H32.1111C33.7066 35 35 33.7066 35 32.1111L35 27.9583C35 27.0609 34.2725 26.3333 33.375 26.3333C32.4775 26.3333 31.75 27.0609 31.75 27.9583L31.75 30.4603C31.75 31.372 31.0109 32.1111 30.0992 32.1111H13.9008C12.9891 32.1111 12.25 31.372 12.25 30.4603L12.25 27.9583C12.25 27.0609 11.5225 26.3333 10.625 26.3333C9.72754 26.3333 9 27.0609 9 27.9583V32.1111Z" fill="#3A3939"/>
+                                        </svg>
+                                    </span>
+                                    <div class="mobile__download-links">
+                                        <a href="" class="mobile__download-link">
+                                            <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M67.8 12H28.2C19.252 12 12 19.252 12 28.2V67.8C12 76.746 19.252 84 28.2 84H67.8C76.748 84 84 76.746 84 67.8V28.2C84 19.252 76.748 12 67.8 12Z" fill="url(#paint0_linear_180_2901)"/>
+                                                <path opacity="0.05" d="M24.6016 61.9541C21.8456 61.9541 19.6016 59.7261 19.6016 56.9861C19.6016 54.2461 21.8456 52.0181 24.6016 52.0181H32.1976L41.9356 35.4001L39.0896 30.5421C38.4136 29.3861 38.2276 28.0401 38.5656 26.7481C38.9036 25.4561 39.7256 24.3721 40.8776 23.7001C41.6456 23.2521 42.5176 23.0161 43.4016 23.0161C45.1716 23.0161 46.8256 23.9641 47.7176 25.4901L47.7316 25.5141L47.7436 25.4921C48.6336 23.9661 50.2876 23.0181 52.0596 23.0181C52.9456 23.0181 53.8176 23.2561 54.5856 23.7041C56.9656 25.1001 57.7656 28.1701 56.3696 30.5481L43.7876 52.0201H50.4436L51.0296 52.6101C51.4736 53.0561 51.8796 53.5621 52.2756 54.1581L52.6696 54.8181C53.6476 56.6401 53.8656 58.6541 53.3076 60.5261L52.8856 61.9541H24.6016Z" fill="black"/>
+                                                <path opacity="0.07" d="M24.6016 60.9539C22.3956 60.9539 20.6016 59.1739 20.6016 56.9859C20.6016 54.7979 22.3956 53.0179 24.6016 53.0179H32.7696L43.0936 35.3999L39.9496 30.0359C39.4096 29.1139 39.2596 28.0359 39.5316 26.9999C39.8016 25.9659 40.4576 25.0999 41.3796 24.5619C41.9936 24.2039 42.6916 24.0139 43.3996 24.0139C44.8156 24.0139 46.1396 24.7719 46.8536 25.9919L47.7296 27.4899L48.6056 25.9939C49.3176 24.7739 50.6416 24.0159 52.0576 24.0159C52.7656 24.0159 53.4636 24.2059 54.0776 24.5639C55.9816 25.6819 56.6196 28.1379 55.5036 30.0399L42.0416 53.0179H50.0256L50.3176 53.3119C50.7136 53.7099 51.0796 54.1659 51.4376 54.7079L51.8076 55.3279C52.6436 56.8899 52.8296 58.6199 52.3476 60.2399L52.1356 60.9539H24.6016Z" fill="black"/>
+                                                <path d="M50.6056 55.2601C50.3096 54.8121 49.9816 54.3921 49.6096 54.0181H40.2976L54.6436 29.5341C55.4816 28.1041 55.0016 26.2661 53.5736 25.4281C52.1416 24.5901 50.3036 25.0701 49.4696 26.5001L47.7296 29.4681L45.9896 26.4981C45.1536 25.0681 43.3156 24.5901 41.8856 25.4261C40.4556 26.2621 39.9756 28.1001 40.8136 29.5301L44.2536 35.4001L33.3436 54.0181H24.6016C22.9436 54.0181 21.6016 55.3481 21.6016 56.9861C21.6016 58.6241 22.9436 59.9541 24.6016 59.9541H51.3896C51.7776 58.6481 51.6716 57.1901 50.9476 55.8381L50.6056 55.2601Z" fill="white"/>
+                                                <path opacity="0.05" d="M28.9993 72.358C28.1133 72.358 27.2413 72.12 26.4733 71.67C25.3213 70.994 24.5013 69.91 24.1633 68.618C23.8273 67.326 24.0133 65.978 24.6893 64.826L26.1153 62.39L26.9953 62.214C27.7173 62.072 28.3913 62 29.0553 62L29.2913 62.002C31.4533 62.066 33.4113 62.99 34.8233 64.602L35.7753 65.686L33.3173 69.886C32.4213 71.412 30.7693 72.358 28.9993 72.358Z" fill="black"/>
+                                                <path opacity="0.07" d="M28.9996 71.358C28.2916 71.358 27.5916 71.168 26.9796 70.808C26.0596 70.268 25.4016 69.4 25.1316 68.366C24.8616 67.332 25.0096 66.254 25.5516 65.332L26.7516 63.284L27.1916 63.196C27.8496 63.064 28.4596 63 29.0556 63L29.2796 63.002C31.1456 63.058 32.8456 63.86 34.0716 65.26L34.5476 65.802L32.4536 69.38C31.7396 70.6 30.4156 71.358 28.9996 71.358Z" fill="black"/>
+                                                <path d="M29.2503 64.004C28.6163 63.986 27.9943 64.056 27.3863 64.178L26.4123 65.84C25.5743 67.27 26.0543 69.108 27.4843 69.946C27.9603 70.226 28.4843 70.358 28.9983 70.358C30.0283 70.358 31.0323 69.826 31.5883 68.876L33.3183 65.922C32.3443 64.81 30.9383 64.054 29.2583 64.004H29.2503Z" fill="white"/>
+                                                <path opacity="0.05" d="M66.4588 72.3579C64.6888 72.3579 63.0348 71.4099 62.1428 69.8859L50.0888 49.3159L50.0548 49.2119C49.2208 46.6339 49.3848 43.9759 50.4828 41.6259L53.8208 35.9099L63.2608 52.0199H71.4008C74.1568 52.0199 76.4008 54.2479 76.4008 56.9879C76.4008 59.7279 74.1568 61.9559 71.4008 61.9559H69.0828L70.7668 64.8299C71.4428 65.9819 71.6288 67.3279 71.2928 68.6219C70.9568 69.9159 70.1348 70.9979 68.9828 71.6739C68.2188 72.1199 67.3468 72.3579 66.4588 72.3579Z" fill="black"/>
+                                                <path opacity="0.07" d="M66.4595 71.3579C65.0435 71.3579 63.7195 70.6019 63.0055 69.3819L51.0055 48.9059L50.9715 48.8019C50.2495 46.5659 50.3955 44.1679 51.3875 42.0499L53.8195 37.8879L62.6855 53.0179H71.4015C73.6075 53.0179 75.4015 54.7979 75.4015 56.9859C75.4015 59.1739 73.6075 60.9539 71.4015 60.9539H67.3395L69.9055 65.3339C70.4475 66.2559 70.5955 67.3339 70.3255 68.3679C70.0555 69.4019 69.3995 70.2699 68.4775 70.8099C67.8675 71.1679 67.1695 71.3579 66.4595 71.3579Z" fill="black"/>
+                                                <path d="M71.4014 54.018H62.1154L53.8214 39.866L52.2954 42.472C51.4074 44.372 51.2874 46.52 51.9254 48.494L63.8694 68.876C64.4274 69.828 65.4294 70.358 66.4594 70.358C66.9734 70.358 67.4974 70.226 67.9734 69.946C69.4034 69.108 69.8814 67.27 69.0434 65.84L65.5934 59.954H71.4014C73.0594 59.954 74.4014 58.624 74.4014 56.986C74.4014 55.348 73.0594 54.018 71.4014 54.018Z" fill="white"/>
+                                                <defs>
+                                                    <linearGradient id="paint0_linear_180_2901" x1="48" y1="9.234" x2="48" y2="80.192" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#33BEF0"/>
+                                                        <stop offset="1" stop-color="#0A85D9"/>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                        <a href="" class="mobile__download-link">
+                                            <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6191 9.21601C14.7191 10.182 14.2031 11.67 14.2031 13.604V82.372C14.2031 84.306 14.7191 85.794 15.6531 86.726L15.8971 86.932L54.4291 48.4V47.534L15.8631 9.01001L15.6191 9.21601Z" fill="url(#paint0_linear_180_2902)"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M67.2465 61.2939L54.3945 48.4379V47.5379L67.2505 34.6819L67.5285 34.8539L82.7345 43.4959C87.0885 45.9499 87.0885 49.9939 82.7345 52.4819L67.5285 61.1239C67.5245 61.1219 67.2465 61.2939 67.2465 61.2939Z" fill="url(#paint1_linear_180_2902)"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M67.5232 61.122L54.3932 47.988L15.6172 86.764C17.0332 88.286 19.4172 88.458 22.0812 86.97L67.5232 61.122Z" fill="url(#paint2_linear_180_2902)"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M67.5232 34.858L22.0812 9.04396C19.4212 7.52196 17.0332 7.72796 15.6172 9.24996L54.3892 47.988L67.5232 34.858Z" fill="url(#paint3_linear_180_2902)"/>
+                                                <defs>
+                                                    <linearGradient id="paint0_linear_180_2902" x1="77.3851" y1="-13.5873" x2="-5.76831" y2="8.58467" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#047ED6"/>
+                                                        <stop offset="1" stop-color="#50E6FF"/>
+                                                    </linearGradient>
+                                                    <linearGradient id="paint1_linear_180_2902" x1="88.4055" y1="47.9849" x2="45.2959" y2="47.9849" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#FFDA1C"/>
+                                                        <stop offset="1" stop-color="#FEB705"/>
+                                                    </linearGradient>
+                                                    <linearGradient id="paint2_linear_180_2902" x1="60.3723" y1="55.1252" x2="10.8298" y2="138.523" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#D9414F"/>
+                                                        <stop offset="1" stop-color="#8C193F"/>
+                                                    </linearGradient>
+                                                    <linearGradient id="paint3_linear_180_2902" x1="5.84971" y1="-13.6668" x2="27.9509" y2="23.5835" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#33C481"/>
+                                                        <stop offset="1" stop-color="#61E3A7"/>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mobile__info">
+                                    <span class="mobile__info-title">+1000 users</span>
+                                    <p class="mobile__info-text">You always have access to investments at your fingertips</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile__image-wrapper" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                            <img src="mobile-phones.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="faq">
+                <div class="site-holder">
+                    <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Frequently Asked <b>Questions</b></h2>
+                    <div class="faq__content">
+                        <div class="faq__questions">
+                            <details data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <summary>What is NextFi?</summary>
+                                <p>Modern AI technologies allow you to read the market with perfect accuracy and make profitable transactions, due to which Next technologies generate a percentage of income for partners.</p>
+                            </details>
+                            <details data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <summary>Can I start investing with just $1?</summary>
+                                <p>Modern AI technologies allow you to read the market with perfect accuracy and make profitable transactions, due to which Next technologies generate a percentage of income for partners.</p>
+                            </details>
+                            <details data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <summary>How many levels are there?</summary>
+                                <p>Modern AI technologies allow you to read the market with perfect accuracy and make profitable transactions, due to which Next technologies generate a percentage of income for partners.</p>
+                            </details>
+                            <details data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <summary>How to make money on investments?</summary>
+                                <p>Modern AI technologies allow you to read the market with perfect accuracy and make profitable transactions, due to which Next technologies generate a percentage of income for partners.</p>
+                            </details>
+                            <details data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <summary>How to make money on investments?</summary>
+                                <p>Modern AI technologies allow you to read the market with perfect accuracy and make profitable transactions, due to which Next technologies generate a percentage of income for partners.</p>
+                            </details>
+                        </div>
+                        <div class="faq__feedback">
+                            <h3 class="faq-title" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">Didn't find the question you're interested in?</h3>
+                            <p class="faq__description" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">Send your details and we will contact you shortly</p>
+                            <form action="" class="faq__form" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                                <input type="text" name="name" class="faq__form-input" placeholder="Name">
+                                <input type="email" name="email" class="faq__form-input" placeholder="E-mail">
+                                <div class="faq__form-field">
+                                    <button class="faq__form-button">Send</button>
+                                    <p class="faq__form-button__description">By clicking the button, you agree to the terms of <a href="">the Privacy Policy.</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="module" src="resources/scss/main.scss"></script>
+        <script type="module" src="resources/js/main.js"></script>
+    </body>
+</html>

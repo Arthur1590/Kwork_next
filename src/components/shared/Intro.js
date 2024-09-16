@@ -1,17 +1,13 @@
-'use client'
 import Image from 'next/image'
 import React from 'react'
+import { Intro__wave } from '../ui/Intro__wave'
+import { Glow } from '../ui/Glow'
 
 export const Intro = () => {
 	return (
 		<section className='main__intro'>
-			<Image
-				width={1920}
-				height={1080}
-				src='/main/main-bg.png'
-				alt='decor waves'
-				className='main__intro-bg'
-			/>
+			<Intro__wave />
+			<Glow />
 			<div className='site-holder'>
 				<div className='main__intro-content'>
 					<div className='main__intro-column'>
@@ -48,8 +44,8 @@ export const Intro = () => {
 					</div>
 					<div className='main__intro-wrapper'>
 						<Image
-							width={696}
-							height={469}
+							width={400}
+							height={400}
 							src='/main/main-img.png'
 							alt=''
 							className='main-img'
