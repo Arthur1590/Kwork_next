@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import React from 'react'
 import { Balance_img } from '../ui/Balance_img'
+import { Getstarted_swiper } from './Getstarted_swiper'
 
 export const Get_started = () => {
 	return (
@@ -69,40 +69,7 @@ export const Get_started = () => {
 						</p>
 						<div className='getstarted__big-content'>
 							{/* SWIPER */}
-							<div className='swiper getstarted-swiper'>
-								<div className='swiper-wrapper'>
-									<div className='swiper-slide'>
-										<div className='getstated__big-content__item'>
-											<div className='getstarted__image-wrapper'>
-												<Image
-													width={280}
-													height={280}
-													src='/main/getstarted-balance.png'
-													alt='balance'
-												/>
-											</div>
-											<a href='' className='btn btn-blue btn-none'>
-												Top up your balance
-											</a>
-										</div>
-									</div>
-									<div className='swiper-slide'>
-										<div className='getstated__big-content__item'>
-											<div className='getstarted__image-wrapper'>
-												<Image
-													width={280}
-													height={280}
-													src='/main/getstarted-balance.png'
-													alt=''
-												/>
-											</div>
-											<a href='' className='btn btn-blue btn-none'>
-												Top up your balance
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
+							<Getstarted_swiper />
 
 							<Balance_img />
 						</div>
