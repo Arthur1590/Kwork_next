@@ -10,8 +10,8 @@ export const Balance_img = () => {
 			<div className='getstated__big-content__item'>
 				<div className='getstarted__image-wrapper'>
 					<Image
-						width={280}
-						height={280}
+						width={400}
+						height={400}
 						src={
 							theme === 'dark'
 								? '/main/Card_finance.png'
@@ -27,8 +27,8 @@ export const Balance_img = () => {
 			<div className='getstated__big-content__item'>
 				<div className='getstarted__image-wrapper'>
 					<Image
-						width={280}
-						height={280}
+						width={400}
+						height={400}
 						src={
 							theme === 'dark'
 								? '/main/Card_finance-1.png'
@@ -43,8 +43,8 @@ export const Balance_img = () => {
 			</div>
 			<div className='getstarted__big-content__image'>
 				<Image
-					width={496}
-					height={360}
+					width={400}
+					height={400}
 					src={
 						theme === 'dark'
 							? '/main/investment_dark.png'

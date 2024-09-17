@@ -29,8 +29,8 @@ export const Getstarted_swiper = () => {
 								<div className='getstarted__image-wrapper'>
 									<Image
 										key={item.alt}
-										width={280}
-										height={280}
+										width={500}
+										height={500}
 										src={theme === 'dark' ? item.dark : item.light}
 										alt={item.alt}
 									/>

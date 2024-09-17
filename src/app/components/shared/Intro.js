@@ -51,6 +51,7 @@ export const Intro = () => {
 							src='/main/main-img.png'
 							alt=''
 							className='main-img'
+							priority
 						/>
 						<Glow />
 					</div>
