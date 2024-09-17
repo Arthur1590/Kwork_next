@@ -737,17 +737,8 @@ header {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				gap: 24px;
-				@media (max-width: 575px) {
-					flex-direction: column;
-					a {
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 202px;
-						height: 48px;
-					}
-				}
+				gap: 10px;
+				
 			}
 		}
 
@@ -1114,7 +1105,7 @@ header {
 					gap: 4px;
 				}
 				@media (max-width: 992px) {
-					align-items: flex-start;
+					text-align: start;
 					gap: 8px;
 				}
 
@@ -1629,7 +1620,7 @@ header {
 			.swiper-pagination {
 				display: none;
 			}
-			
+
 			@media (max-width: 992px) {
 				padding-bottom: 88px;
 				max-width: 396px;
@@ -1637,7 +1628,6 @@ header {
 					display: flex;
 					justify-content: center;
 					bottom: 40px;
-					
 				}
 				.swiper-scrollbar__levels {
 					display: none;
@@ -1688,7 +1678,7 @@ header {
 				box-shadow: 1px 1px 4px 0 #00000040;
 				cursor: pointer;
 				top: -16px;
-				
+
 				@media (max-width: 768px) {
 					height: 40px;
 					top: -8px;
