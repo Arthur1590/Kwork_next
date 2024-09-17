@@ -12,7 +12,7 @@ export const Glow = () => {
 				height={1080}
 				src='/main/glow.svg'
 				alt='decor glow'
-				className='main__intro-glow'
+				className='main__intro-wrapper-glow'
 			/>
 			)}
 		</>

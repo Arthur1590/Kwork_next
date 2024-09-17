@@ -1,5 +1,5 @@
 import React from 'react'
-import { Scrollbar } from 'swiper/modules'
+import { Scrollbar, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css/pagination'
 import Image from 'next/image'
@@ -74,10 +74,11 @@ const sliderData = [
 export const Levels_swiper = () => {
 	return (
 		<Swiper
-			modules={[Scrollbar]}
+			modules={[Scrollbar, Pagination]}
 			scrollbar={{ draggable: true, hide: false }}
 			slidesPerView={3}
 			spaceBetween={24}
+			pagination={{ clickable: true }}
 			className='swiper swiper-levels'
 			observer={true}
 			observeParents={true}

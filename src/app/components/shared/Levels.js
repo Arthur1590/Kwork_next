@@ -36,7 +36,17 @@ export const Levels = () => {
 					and preferences.
 				</p>
 				{/* Swiper */}
-				<Levels_swiper />
+
+				<div
+					className='swiper swiper-levels'
+					data-aos='fade-up'
+					data-aos-duration='1000'
+					data-aos-once='true'
+				>
+					<div className='swiper-wrapper'>
+						<Levels_swiper />
+					</div>
+				</div>
 			</div>
 		</section>
 	)

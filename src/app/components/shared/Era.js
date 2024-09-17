@@ -123,7 +123,7 @@ export const Era = () => {
 							<Image
 								width={56}
 								height={56}
-								src={'/main/Aptoide.png'}
+								src={'/main/dowload_icons/Aptoide.svg'}
 								alt='Apptoide'
 							/>
 						</Link>
@@ -131,7 +131,7 @@ export const Era = () => {
 							<Image
 								width={56}
 								height={56}
-								src={'/main/Desktop_ apple-app-store.png'}
+								src={'/main/dowload_icons/google-play.svg'}
 								alt='Appstore'
 							/>
 						</Link>
@@ -139,7 +139,7 @@ export const Era = () => {
 							<Image
 								width={56}
 								height={56}
-								src={'/main/Desktop_ google-play.png'}
+								src={'/main/dowload_icons/apple-app-store.svg'}
 								alt='Google play'
 							/>
 						</Link>
