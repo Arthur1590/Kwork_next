@@ -74,7 +74,7 @@ const sliderData = [
 export const Levels_swiper = () => {
 	return (
 		<Swiper
-			modules={[Scrollbar, Pagination]}
+			modules={[Scrollbar]}
 			scrollbar={{ draggable: true, hide: false }}
 			slidesPerView={3}
 			spaceBetween={24}
@@ -85,15 +85,12 @@ export const Levels_swiper = () => {
 			breakpoints={{
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 20
 				},
 				993: {
 					slidesPerView: 2,
-					spaceBetween: 20
 				},
 				1238: {
 					slidesPerView: 3,
-					spaceBetween: 24,
 				}
 			}}
 		>
