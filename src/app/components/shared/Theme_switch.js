@@ -1,6 +1,6 @@
 'use client'
 import { useEffect } from 'react'
-import { useThemeStore } from '../../store/index'
+import { useThemeStore } from '../../../store'
 
 export default function Theme_switch() {
 	const { theme, setTheme, initializeTheme } = useThemeStore()

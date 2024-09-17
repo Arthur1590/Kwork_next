@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { useThemeStore } from '../../store'
+import { useThemeStore } from '../../../store'
 import Image from 'next/image'
 
 export const Balance_img = () => {

@@ -2,12 +2,14 @@ import Image from 'next/image'
 import React from 'react'
 import { Intro__wave } from '../ui/Intro__wave'
 import { Glow } from '../ui/Glow'
+import { useTranslations } from 'next-intl'
 
 export const Intro = () => {
+	const t = useTranslations('intro')
+
 	return (
 		<section className='main__intro'>
 			<Intro__wave />
-			<Glow />
 			<div className='site-holder'>
 				<div className='main__intro-content'>
 					<div className='main__intro-column'>
@@ -16,8 +18,9 @@ export const Intro = () => {
 							data-aos-duration='800'
 							data-aos-once='true'
 						>
-							Explore new opportunities in financial&nbsp;investing{' '}
-							<b>with NextFi token</b>
+							{t.rich('Explore', {
+								b: chunks => <b>{chunks}</b>,
+							})}
 						</h1>
 
 						<span
@@ -25,8 +28,7 @@ export const Intro = () => {
 							data-aos-duration='800'
 							data-aos-once='true'
 						>
-							Modern AI solutions provide reliable tokenomics, sustained growth
-							in investments, and ensure the safety of your funds.
+							{t('Modern')}
 						</span>
 						<div
 							className='main__buttons'
@@ -35,10 +37,10 @@ export const Intro = () => {
 							data-aos-once='true'
 						>
 							<a href='' className='btn btn-blue'>
-								Sign Up
+								{t('SignUp')}
 							</a>
 							<a href='' className='btn btn-transparent'>
-								Log In
+								{t('LogIn')}
 							</a>
 						</div>
 					</div>
@@ -50,6 +52,7 @@ export const Intro = () => {
 							alt=''
 							className='main-img'
 						/>
+						<Glow />
 					</div>
 				</div>
 				<div
@@ -59,26 +62,24 @@ export const Intro = () => {
 					data-aos-once='true'
 				>
 					<div className='main__intro-values-item'>
-						<span className='main__intro-values-item__count'>$65 B</span>
+						<span className='main__intro-values-item__count'>{t('$65B')}</span>
 						<span className='main__intro-values-item__name'>
-							Investment Volume
+							{t('Investment')}
 						</span>
 					</div>
 					<div className='main__intro-values-item'>
-						<span className='main__intro-values-item__count'>$350 M</span>
-						<span className='main__intro-values-item__name'>
-							Payout Volume in 24 Hours
-						</span>
+						<span className='main__intro-values-item__count'>{t('$350M')}</span>
+						<span className='main__intro-values-item__name'>{t('Payout')}</span>
 					</div>
 					<div className='main__intro-values-item'>
 						<span className='main__intro-values-item__count'>+750</span>
-						<span className='main__intro-values-item__name'>All Users</span>
+						<span className='main__intro-values-item__name'>
+							{t('AllUsers')}
+						</span>
 					</div>
 					<div className='main__intro-values-item'>
-						<span className='main__intro-values-item__count'>+230 K</span>
-						<span className='main__intro-values-item__name'>
-							Bonus Received
-						</span>
+						<span className='main__intro-values-item__count'>{t('+230')}</span>
+						<span className='main__intro-values-item__name'>{t('Bonus')}</span>
 					</div>
 				</div>
 			</div>

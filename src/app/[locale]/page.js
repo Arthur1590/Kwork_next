@@ -9,7 +9,7 @@ import {
 	Invest,
 	Levels,
 	Faq,
-} from '../../components/shared/index'
+} from '../components/shared/index'
 import { useEffect } from 'react'
 
 export default function Home() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useThemeStore } from '../../store'
+import { useThemeStore } from '../../../store'
 import Image from 'next/image'
 
 const images = [

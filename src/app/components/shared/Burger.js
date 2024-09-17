@@ -3,6 +3,7 @@ import React from 'react'
 import clsx from 'clsx'
 import Theme_switch from './Theme_switch'
 import Locale_Switcher from './Locale_Switcher'
+import { useTranslations } from 'next-intl'
 
 export const Burger = () => {
 	const [show, setShow] = React.useState(true)
@@ -11,6 +12,7 @@ export const Burger = () => {
 	const handleClick = () => {
 		setShow(!show)
 	}
+	const t = useTranslations('nav')
 	return (
 		<>
 			{!show && (
@@ -28,35 +30,35 @@ export const Burger = () => {
 						<div className='m__nav'>
 							<div className='m__buttons'>
 								<a href='' className='m__buttons-signup'>
-									Sign Up
+									{t('SignUp')}
 								</a>
 								<a href='' className='m__buttons-login m__outline'>
-									Log In
+									{t('LogIn')}
 								</a>
 							</div>
 
 							<ul className='m__nav-list'>
-							<a href='' className='m__nav-item'>
-								Home
-							</a>
-							<a href='' className='m__nav-item'>
-								Token
-							</a>
-							<a href='' className='m__nav-item'>
-								Activity
-							</a>
-							<a href='' className='m__nav-item'>
-								How to start
-							</a>
-							<a href='' className='m__nav-item'>
-								Listing
-							</a>
-							<a href='' className='m__nav-item'>
-								App
-							</a>
-							<a href='' className='m__nav-item'>
-								FAQ
-							</a>
+								<a href='' className='m__nav-item'>
+									{t('home')}
+								</a>
+								<a href='' className='m__nav-item'>
+									{t('token')}
+								</a>
+								<a href='' className='m__nav-item'>
+									{t('activity')}
+								</a>
+								<a href='' className='m__nav-item'>
+									{t('how')}
+								</a>
+								<a href='' className='m__nav-item'>
+									{t('listing')}
+								</a>
+								<a href='' className='m__nav-item'>
+									{t('app')}
+								</a>
+								<a href='' className='m__nav-item'>
+									{t('faq')}
+								</a>
 							</ul>
 						</div>
 					</div>

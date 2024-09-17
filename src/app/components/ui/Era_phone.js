@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-import { useThemeStore } from '../../store'
+import { useThemeStore } from '../../../store'
 
 export const Era_phone = () => {
 	const { theme } = useThemeStore()

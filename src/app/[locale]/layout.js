@@ -5,7 +5,9 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
-import { Header } from '../../components/shared/Header'
+import { Header } from '../components/shared/Header'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
 
 const onest = Onest({ subsets: ['latin'] })
 
@@ -14,12 +16,17 @@ export const metadata = {
 	description: 'Coded by Arthur',
 }
 
-export default function RootLayout({ children, params: { locale } }) {
+export default async function RootLayout({ children, params: { locale } }) {
+	const messages = await getMessages()
+
 	return (
 		<html lang={locale}>
 			<body className={onest.className}>
-				<Header />
-				<main className='main'>{children}</main>
+				<NextIntlClientProvider messages={messages}>
+					<Header />
+
+					<main className='main'>{children}</main>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	)

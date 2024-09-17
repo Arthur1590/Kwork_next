@@ -3,9 +3,24 @@
 		"home": "Home",
 		"token": "Token",
 		"activity": "Activity",
-		"how": "How to start",
+		"how": "How to get started",
 		"listing": "Listing",
 		"app": "App",
-		"faq": "FAQ"
+		"faq": "FAQ",
+		"SignUp": "Sign Up",
+		"LogIn": "Log In"
+	},
+	"intro": {
+		"Explore": "Explore new opportunities in financial investing <b>with NextFi token</b>",
+		"Modern": "Modern AI solutions provide reliable tokenomics, sustained growth in investments, and ensure the safety of your funds.",
+		"SignUp": "Sign Up",
+		"LogIn": "Log In",
+		"$65B": "$65 B",
+		"Investment": "Investment Volume",
+		"$350M": "$350 M",
+		"Payout": "Payout Volume in 24 Hours",
+		"AllUsers": "All Users",
+		"+230": "+230 K",
+		"Bonus": "Bonus Received"
 	}
 }

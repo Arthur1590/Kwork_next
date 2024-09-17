@@ -278,7 +278,6 @@ header {
 				&-login {
 					padding: 12px;
 					width: 132px;
-
 					font-size: 20px;
 					line-height: 28px;
 					font-weight: 500;
@@ -308,7 +307,7 @@ header {
 				}
 				&-signup {
 					padding: 12px;
-					width: 136px;
+					width: 155px;
 
 					font-size: 20px;
 					line-height: 28px;
@@ -439,15 +438,17 @@ header {
 		display: block;
 		position: fixed;
 		z-index: 10;
+		width: 428px;
 		top: 0;
 		right: 0;
 		bottom: 0;
-		width: 320px;
 		overflow-y: auto;
 		background-color: var(--bg-mobile);
 		transform-origin: 0 0;
 		list-style-type: none;
-		transition: opacity 0.3s ease-in;
+		@media (max-width: 442px) {
+			width: 100vw;
+		}
 	}
 	.wrapper {
 		width: 100%;
@@ -647,8 +648,8 @@ header {
 			width: auto;
 			height: auto;
 			position: absolute;
-			top: 251px;
-			right: -3px;
+			top: 127px;
+			right: -6px;
 			z-index: -1;
 			user-select: none;
 			pointer-events: none;
@@ -754,6 +755,7 @@ header {
 			max-width: 696px;
 			width: 100%;
 			height: auto;
+			position: relative;
 
 			img {
 				width: auto;
